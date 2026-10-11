@@ -1,0 +1,249 @@
+{
+  "pretrained": {
+    "accuracy": 0.0,
+    "total_samples": 1500,
+    "correct_samples": 0,
+    "per_task_type": {
+      "direct_comparison": 0.0,
+      "negated": 0.0,
+      "multi_attribute": 0.0,
+      "multihop_chained": 0.0,
+      "transitive_ordering": 0.0,
+      "superlative": 0.0
+    },
+    "success_examples": [],
+    "failure_examples": [
+      {
+        "question": "ओजस को मूल्य 4921 रुपैयाँ छ। आयुष को मूल्य 396 रुपैयाँ छ। दुईमा महँगो को हो? उत्तर: ",
+        "gold": "ओजस",
+        "pred": "1000।",
+        "category": "other",
+        "task_type": "direct_comparison"
+      },
+      {
+        "question": "बिभा को तौल 46 किलो छ। विद्या को तौल 35 किलो छ। दुईमा हल्का को हो? उत्तर: ",
+        "gold": "विद्या",
+        "pred": "10 किलो।",
+        "category": "other",
+        "task_type": "direct_comparison"
+      },
+      {
+        "question": "विद्या, रश्मि भन्दा होचो छैन। दुईमा अग्लो को हो? उत्तर: ",
+        "gold": "विद्या",
+        "pred": "",
+        "category": "incomplete",
+        "task_type": "negated"
+      },
+      {
+        "question": "ओम: मूल्य 239 रुपैयाँ, तौल 9 किलो। दीक्षा: मूल्य 398 रुपैयाँ, तौल 6 किलो। सस्तो को हो? उत्तर: ",
+        "gold": "ओम",
+        "pred": "मूल्य 200 ⁇ ।",
+        "category": "wrong_entity",
+        "task_type": "multi_attribute"
+      },
+      {
+        "question": "आयुष: मूल्य 541 रुपैयाँ, तौल 9 किलो। तेजस: मूल्य 638 रुपैयाँ, तौल 4 किलो। महँगो को हो? उत्तर: ",
+        "gold": "तेजस",
+        "pred": "मूल्य  ⁇  100।",
+        "category": "wrong_entity",
+        "task_type": "multi_attribute"
+      },
+      {
+        "question": "ज्ञानेन्द्र को तौल 61 किलो छ। आयुष को तौल 111 किलो छ। दुईमा हल्का को हो? उत्तर: ",
+        "gold": "ज्ञानेन्द्र",
+        "pred": "11 किलो छ।",
+        "category": "wrong_entity",
+        "task_type": "direct_comparison"
+      },
+      {
+        "question": "हर्ष, नारायणी भन्दा अग्लो छैन। दुईमा अग्लो को हो? उत्तर: ",
+        "gold": "नारायणी",
+        "pred": "",
+        "category": "incomplete",
+        "task_type": "negated"
+      },
+      {
+        "question": "तेजस: मूल्य 495 रुपैयाँ, तौल 8 किलो। दीक्षा: मूल्य 487 रुपैयाँ, तौल 7 किलो। हल्का को हो? उत्तर: ",
+        "gold": "दीक्षा",
+        "pred": "मूल्य  ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇   ⁇",
+        "category": "wrong_entity",
+        "task_type": "multi_attribute"
+      },
+      {
+        "question": "पूजन, रश्मि भन्दा ठूलो छैन। दुईमा ठूलो को हो? उत्तर: ",
+        "gold": "रश्मि",
+        "pred": "",
+        "category": "incomplete",
+        "task_type": "negated"
+      },
+      {
+        "question": "विद्या 170 सेमी अग्लो छ र मुकुल 140 सेमी अग्लो छ। अग्लो को हो? उत्तर: ",
+        "gold": "विद्या",
+        "pred": "1 ⁇  सेमी अग्लो छ।",
+        "category": "wrong_entity",
+        "task_type": "direct_comparison"
+      }
+    ],
+    "failure_counts": {
+      "wrong_entity": 553,
+      "wrong_direction": 0,
+      "hallucination": 107,
+      "incomplete": 708,
+      "other": 132
+    }
+  },
+  "finetuned": {
+    "accuracy": 0.5433333333333333,
+    "total_samples": 1500,
+    "correct_samples": 815,
+    "per_task_type": {
+      "direct_comparison": 0.3481781376518219,
+      "negated": 0.7758620689655172,
+      "multi_attribute": 0.27734375,
+      "multihop_chained": 0.8560311284046692,
+      "transitive_ordering": 0.7813765182186235,
+      "superlative": 0.24904214559386972
+    },
+    "success_examples": [
+      {
+        "question": "विद्या, रश्मि भन्दा होचो छैन। दुईमा अग्लो को हो? उत्तर: ",
+        "gold": "विद्या",
+        "pred": "विद्या",
+        "task_type": "negated"
+      },
+      {
+        "question": "हर्ष, नारायणी भन्दा अग्लो छैन। दुईमा अग्लो को हो? उत्तर: ",
+        "gold": "नारायणी",
+        "pred": "नारायणी",
+        "task_type": "negated"
+      },
+      {
+        "question": "पूजन, रश्मि भन्दा ठूलो छैन। दुईमा ठूलो को हो? उत्तर: ",
+        "gold": "रश्मि",
+        "pred": "रश्मि",
+        "task_type": "negated"
+      },
+      {
+        "question": "एलिना, निर्देश भन्दा ठूलो छ। निर्देश, कान्तिपुर भन्दा ठूलो छ। कान्तिपुर, दीक्षा भन्दा ठूलो छ। एलिना र दीक्षा मा ठूलो को हो? उत्तर: ",
+        "gold": "एलिना",
+        "pred": "एलिना",
+        "task_type": "multihop_chained"
+      },
+      {
+        "question": "सबिना, नारायणी भन्दा अग्लो छ। नारायणी, ओजस भन्दा अग्लो छ। सबैभन्दा अग्लो को हो? उत्तर: ",
+        "gold": "सबिना",
+        "pred": "सबिना",
+        "task_type": "transitive_ordering"
+      },
+      {
+        "question": "पारस 194 सेमी अग्लो छ र दीक्षा 174 सेमी अग्लो छ। अग्लो को हो? उत्तर: ",
+        "gold": "पारस",
+        "pred": "पारस",
+        "task_type": "direct_comparison"
+      },
+      {
+        "question": "तेजस, युवराज भन्दा भारी छ। युवराज, लोकेन्द्र भन्दा भारी छ। सबैभन्दा हल्का को हो? उत्तर: ",
+        "gold": "लोकेन्द्र",
+        "pred": "लोकेन्द्र",
+        "task_type": "transitive_ordering"
+      },
+      {
+        "question": "नारायणी, चन्दनी भन्दा सानो छैन। दुईमा ठूलो को हो? उत्तर: ",
+        "gold": "नारायणी",
+        "pred": "नारायणी",
+        "task_type": "negated"
+      },
+      {
+        "question": "ओम, विक्रान्त भन्दा भारी छैन। दुईमा भारी को हो? उत्तर: ",
+        "gold": "विक्रान्त",
+        "pred": "विक्रान्त",
+        "task_type": "negated"
+      },
+      {
+        "question": "विक्रान्त, कान्तिपुर भन्दा ठूलो छ। कान्तिपुर, युवराज भन्दा ठूलो छ। युवराज, ओम भन्दा ठूलो छ। विक्रान्त र ओम मा ठूलो को हो? उत्तर: ",
+        "gold": "विक्रान्त",
+        "pred": "विक्रान्त",
+        "task_type": "multihop_chained"
+      }
+    ],
+    "failure_examples": [
+      {
+        "question": "ओजस को मूल्य 4921 रुपैयाँ छ। आयुष को मूल्य 396 रुपैयाँ छ। दुईमा महँगो को हो? उत्तर: ",
+        "gold": "ओजस",
+        "pred": "आयुष",
+        "category": "wrong_entity",
+        "task_type": "direct_comparison"
+      },
+      {
+        "question": "बिभा को तौल 46 किलो छ। विद्या को तौल 35 किलो छ। दुईमा हल्का को हो? उत्तर: ",
+        "gold": "विद्या",
+        "pred": "बिभा",
+        "category": "wrong_entity",
+        "task_type": "direct_comparison"
+      },
+      {
+        "question": "ओम: मूल्य 239 रुपैयाँ, तौल 9 किलो। दीक्षा: मूल्य 398 रुपैयाँ, तौल 6 किलो। सस्तो को हो? उत्तर: ",
+        "gold": "ओम",
+        "pred": "दीक्षा",
+        "category": "other",
+        "task_type": "multi_attribute"
+      },
+      {
+        "question": "आयुष: मूल्य 541 रुपैयाँ, तौल 9 किलो। तेजस: मूल्य 638 रुपैयाँ, तौल 4 किलो। महँगो को हो? उत्तर: ",
+        "gold": "तेजस",
+        "pred": "तेज",
+        "category": "other",
+        "task_type": "multi_attribute"
+      },
+      {
+        "question": "ज्ञानेन्द्र को तौल 61 किलो छ। आयुष को तौल 111 किलो छ। दुईमा हल्का को हो? उत्तर: ",
+        "gold": "ज्ञानेन्द्र",
+        "pred": "शर्मा",
+        "category": "other",
+        "task_type": "direct_comparison"
+      },
+      {
+        "question": "तेजस: मूल्य 495 रुपैयाँ, तौल 8 किलो। दीक्षा: मूल्य 487 रुपैयाँ, तौल 7 किलो। हल्का को हो? उत्तर: ",
+        "gold": "दीक्षा",
+        "pred": "तेज",
+        "category": "other",
+        "task_type": "multi_attribute"
+      },
+      {
+        "question": "विद्या 170 सेमी अग्लो छ र मुकुल 140 सेमी अग्लो छ। अग्लो को हो? उत्तर: ",
+        "gold": "विद्या",
+        "pred": "मुकुल",
+        "category": "wrong_entity",
+        "task_type": "direct_comparison"
+      },
+      {
+        "question": "ओम, नारायणी भन्दा ठूलो छ। नारायणी, निर्देश भन्दा ठूलो छ। सबैभन्दा सानो को हो? उत्तर: ",
+        "gold": "निर्देश",
+        "pred": "निशा",
+        "category": "other",
+        "task_type": "transitive_ordering"
+      },
+      {
+        "question": "एलिना को तौल 74 किलो छ। दीक्षा को तौल 62 किलो छ। दुईमा भारी को हो? उत्तर: ",
+        "gold": "एलिना",
+        "pred": "अजय",
+        "category": "other",
+        "task_type": "direct_comparison"
+      },
+      {
+        "question": "विक्रान्त, ज्ञानेन्द्र भन्दा होचो छैन। दुईमा अग्लो को हो? उत्तर: ",
+        "gold": "विक्रान्त",
+        "pred": "बिक्रान्त",
+        "category": "other",
+        "task_type": "negated"
+      }
+    ],
+    "failure_counts": {
+      "wrong_entity": 199,
+      "wrong_direction": 0,
+      "hallucination": 2,
+      "incomplete": 0,
+      "other": 484
+    }
+  }
+}

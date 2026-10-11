@@ -1,0 +1,37 @@
+# ============================================================
+# requirements.txt — LMA Individual Project (Phases 1, 2 & 3)
+# ============================================================
+
+# --- Core Deep Learning & Numerics ---
+torch>=2.0.0
+numpy>=1.24.0
+
+# --- Tokenization ---
+sentencepiece>=0.2.0        # Google SentencePiece tokenizer (Unigram / BPE)
+
+# --- Phase 1: Data Collection, Extraction & OCR ---
+wikiextractor>=3.0.6        # Wikipedia XML dump parsing
+mwparserfromhell>=0.6       # MediaWiki markup parsing (for Wikisource)
+requests>=2.31              # HTTP requests for scraping & downloads
+beautifulsoup4>=4.12        # HTML parsing for web scraping
+lxml>=4.9                   # XML backend
+pytesseract>=0.3.10         # OCR wrapper for Tesseract
+Pillow>=10.0                # Image processing for OCR
+pdf2image>=1.16             # PDF to image conversion for OCR
+datasets>=2.14              # HuggingFace datasets (data loading only, NOT models)
+huggingface_hub>=0.17       # Dataset file downloads
+
+# --- Phase 1: Cleaning, Deduplication & Filtering ---
+fasttext-wheel>=0.9.2       # Language identification (LID)
+datasketch>=1.6             # MinHash LSH for near-duplicate detection
+
+# --- Phase 2 & 3: Evaluation, Generation & Visualization ---
+sacrebleu>=2.3.0            # Corpus BLEU and chrF++ computation
+rouge-score>=0.1.2          # ROUGE-L score computation
+matplotlib>=3.7.0           # Attention heatmaps & loss trajectory plotting
+seaborn>=0.12.0             # Statistical visualization
+scipy>=1.10.0               # Scientific computing
+
+# --- Utilities ---
+pyyaml>=6.0                 # YAML configuration parsing
+tqdm>=4.65                  # Progress bars

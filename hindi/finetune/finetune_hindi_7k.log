@@ -1,0 +1,25 @@
+2026-09-12 11:59:07,809 - INFO - Using device: cuda
+2026-09-12 11:59:07,811 - INFO - Training on dataset: /kaggle/input/datasets/srinivasu2005/finetune-hindi/train_7k.jsonl
+2026-09-12 11:59:07,811 - INFO - Output directory: /kaggle/working/finetuned_model_hindi
+2026-09-12 11:59:07,863 - INFO - Loaded tokenizer
+2026-09-12 11:59:07,879 - INFO - Loaded tokenizer from /kaggle/input/notebooks/srinivasu2005/hindi-tokenizer/tokenizer/tokenizer.model
+2026-09-12 11:59:08,009 - INFO - Loaded reasoning data — Train: 7000 examples, Val: 1500 examples
+2026-09-12 11:59:08,031 - INFO - Loaded LM test dataset from /kaggle/input/notebooks/srinivasu2005/tokenize-hindi/hindi_tokenized/test.bin (32339 sequences)
+2026-09-12 11:59:08,953 - INFO - Loading pretrained checkpoint from /kaggle/input/notebooks/srinivasu2005/train-hindi/checkpoints_hindi/best_model.pt
+2026-09-12 11:59:14,144 - INFO - Loading pretrained checkpoint from /kaggle/input/notebooks/srinivasu2005/train-hindi/checkpoints_hindi/best_model.pt
+2026-09-12 11:59:14,459 - INFO - Loaded pretrained weights successfully
+2026-09-12 11:59:19,519 - INFO - Initial Pretrained LM Test Loss: 3.2825 | PPL: 26.64 (Reported baseline: 26.97)
+2026-09-12 12:01:47,513 - INFO - Epoch 1/10 - Train Loss: 1.0241 - Val Loss: 0.6552 - Val Acc: 0.6800 - LR: 1.00e-04
+2026-09-12 12:01:52,114 - INFO - Epoch 1/10 | Train Loss: 1.0241 | Val Loss: 0.6552 | Reasoning Val Acc: 68.00% | LM Test PPL: 31.88 (Δ: +19.7%)
+2026-09-12 12:01:52,595 - INFO - Saved new best model with Val Acc: 68.00% (LM PPL: 31.88)
+2026-09-12 12:04:14,740 - INFO - Epoch 2/10 - Train Loss: 0.3844 - Val Loss: 0.9883 - Val Acc: 0.5900 - LR: 9.66e-05
+2026-09-12 12:04:19,316 - WARNING - ⚠️ Catastrophic forgetting risk! LM PPL degraded by +60.2% (26.64 -> 42.68)
+2026-09-12 12:04:19,316 - INFO - Epoch 2/10 | Train Loss: 0.3844 | Val Loss: 0.9883 | Reasoning Val Acc: 59.00% | LM Test PPL: 42.68 (Δ: +60.2%)
+2026-09-12 12:06:41,264 - INFO - Epoch 3/10 - Train Loss: 0.2698 - Val Loss: 1.7321 - Val Acc: 0.3300 - LR: 8.77e-05
+2026-09-12 12:06:45,848 - WARNING - ⚠️ Catastrophic forgetting risk! LM PPL degraded by +165.7% (26.64 -> 70.78)
+2026-09-12 12:06:45,849 - INFO - Epoch 3/10 | Train Loss: 0.2698 | Val Loss: 1.7321 | Reasoning Val Acc: 33.00% | LM Test PPL: 70.78 (Δ: +165.7%)
+2026-09-12 12:09:08,100 - INFO - Epoch 4/10 - Train Loss: 0.1830 - Val Loss: 2.1985 - Val Acc: 0.2100 - LR: 7.45e-05
+2026-09-12 12:09:12,683 - WARNING - ⚠️ Catastrophic forgetting risk! LM PPL degraded by +258.7% (26.64 -> 95.57)
+2026-09-12 12:09:12,684 - INFO - Epoch 4/10 | Train Loss: 0.1830 | Val Loss: 2.1985 | Reasoning Val Acc: 21.00% | LM Test PPL: 95.57 (Δ: +258.7%)
+2026-09-12 12:09:12,686 - INFO - Early stopping triggered after 4 epochs
+2026-09-12 12:09:12,686 - INFO - Finetuning completed. Best Reasoning Val Acc: 68.00%
